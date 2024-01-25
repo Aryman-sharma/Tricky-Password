@@ -4,25 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tricky-Password</title>
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
     <div class="container">
-      <div class="main-heading">Passwrod - Generator</div>
+      <div class="main-heading">Password - Generator</div>
 
       <div class="display-container">
         <input readonly placeholder="Password" class="display" data-passwordDisplay />
 
         <!-- we can give custom attribute to the attributes so that they can be fetched ex: data-passwordDisplay  -->
-        <button>
-          <span data-copyMsg></span>
-          <img src="./images/copy.png" alt="ss" width="23" height="23" />
+        <button id="cpbtn">
+          <span data-copyMsg class="active"></span>
+          <img src="./images/copy.png" alt="ss" width="35" height="35" id="imgg" />
         </button>
       </div>
 
     <div class="input-container">
         <div class="length-container">
-          <p>Password Length</p>
-          <p data-length-container>0</p>
+          <p id="p1">Password Length</p>
+          <p id="p2"data-length-container>0</p>
         </div>
 
         <!-- slider -->
@@ -35,27 +41,27 @@
         />
 
         <!-- Checkboxes -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Includes Uppercase Letters</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Includes Lowercase Letters</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Includes Numbers </label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Includes Symbols </label>
         </div>
 
         <!--  Strength section -->
         <div class="stength-container">
-          <p>Strength</p>
-          <div data-indicator></div>
+          <p id="p3">Strength</p>
+          <div data-indicator id="indicator"></div>
         </div>
         <!-- Generate password button -->
 
